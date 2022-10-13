@@ -1,0 +1,26 @@
+/* source keypos definitions */
+#include "../zmk-nodefree-config/keypos_def/keypos_48keys.h"
+
+/* map Planck's extra keys */
+#define EXTRA_MID   &none            &none              // 3x2 middle keys
+#define EXTRA_BOT_L &none            &kp LGUI  &none    // 1x2 bottom left keys
+#define EXTRA_BOT_R &none            &none              // 1x2 bottom right keys
+
+// ARTS Row
+#define KEY_A RM2
+#define KEY_R RM3
+#define KEY_T RM4
+#define KEY_S RM5
+// EYIO Row
+#define KEY_E RB2
+#define KEY_Y RB3
+#define KEY_I RB4
+#define KEY_O RB5
+
+// Define Offsets
+#define LEADING_NONES NONE(0,2,0)
+#define MIDDLE_NONES NONE(0,0,8)
+#define TRAILING_NONES NONE(0,1,2)
+
+/* source the main keymap */
+#include "base.keymap"

@@ -1,0 +1,123 @@
+/*                              34 KEY MATRIX / LAYOUT MAPPING
+
+ ╭─────────────────────┬─────────────────────╮
+ │ LT4 LT3 LT2 LT1 LT0 │ RT0 RT1 RT2 RT3 RT4 │
+ │ LM4 LM3 LM2 LM1 LM0 │ RM0 RM1 RM2 RM3 RM4 │
+ │ LB4 LB3 LB2 LB1 LB0 │ RB0 RB1 RB2 RB3 RB4 │
+ ╰───────────╮ LH1 LH0 │ RH0 RH1 ╭───────────╯
+             ╰─────────┴─────────╯             */
+#undef COMBO_HOOK
+#define COMBO_HOOK global-quick-tap-ms = <125>;
+
+#define COMBO_TERM_FAST 20
+#define COMBO_TERM_SLOW 35
+
+#if !defined TIMEOUT_COMBO_2
+#define TIMEOUT_COMBO_2 175
+#endif
+#if !defined TIMEOUT_COMBO_3
+#define TIMEOUT_COMBO_3 175
+#endif
+#if !defined TIMEOUT_COMBO_4
+#define TIMEOUT_COMBO_4 175
+#endif
+#if !defined TIMEOUT_LAYER_HOLD
+#define TIMEOUT_LAYER_HOLD 200
+#endif
+#if !defined TIMEOUT_STICKY_LEADER_KEY
+#define TIMEOUT_STICKY_LEADER_KEY 5000
+#endif
+
+/* Punctuation (horizontal left hand) */
+ZMK_COMBO_ADV(num,   &tog NUM,      LT3 LT1, DEF NUM, COMBO_TERM_SLOW)
+ZMK_COMBO_ADV(all,   &kp LG(A),     LT3 LT2, DEF NUM, COMBO_TERM_FAST)
+ZMK_COMBO_ADV(app,   &kp LG(SPACE), LT2 LT1, DEF NUM, COMBO_TERM_FAST)
+
+ZMK_COMBO_ADV(excl,  &kp EXCL,      LM3 LM2, DEF NUM, COMBO_TERM_FAST)
+ZMK_COMBO_ADV(qmark, &kp QMARK,     LM2 LM1, DEF NUM, COMBO_TERM_FAST)
+
+ZMK_COMBO_ADV(cut,   &kp LG(X),     LB3 LB1, DEF NUM, COMBO_TERM_SLOW)
+ZMK_COMBO_ADV(copy,  &kp LG(C),     LB3 LB2, DEF NUM, COMBO_TERM_FAST)
+ZMK_COMBO_ADV(paste, &kp LG(V),     LB2 LB1, DEF NUM, COMBO_TERM_FAST)
+
+/* Brackets (horizontal right hand) */
+ZMK_COMBO_ADV(lbrc,  &kp LBRC,      RT1 RT2, DEF NUM, COMBO_TERM_FAST)
+ZMK_COMBO_ADV(rbrc,  &kp RBRC,      RT2 RT3, DEF NUM, COMBO_TERM_FAST)
+ZMK_COMBO_ADV(lpar,  &kp LPAR,      RM1 RM2, DEF NUM, COMBO_TERM_FAST)
+ZMK_COMBO_ADV(rpar,  &kp RPAR,      RM2 RM3, DEF NUM, COMBO_TERM_FAST)
+ZMK_COMBO_ADV(lbrk,  &kp LBKT,      RB1 RB2, DEF NUM, COMBO_TERM_FAST)
+ZMK_COMBO_ADV(rbrk,  &kp RBKT,      RB2 RB3, DEF NUM, COMBO_TERM_FAST)
+
+/* Other symbols (vertical combos) */
+ZMK_COMBO_ADV(at,    &kp AT,        LT3 LM3, DEF NUM, COMBO_TERM_SLOW)
+ZMK_COMBO_ADV(hash,  &kp HASH,      LT2 LM2, DEF NUM, COMBO_TERM_SLOW)
+ZMK_COMBO_ADV(dllr,  &kp DLLR,      LT1 LM1, DEF NUM, COMBO_TERM_SLOW)
+ZMK_COMBO_ADV(prcnt, &kp PRCNT,     LT0 LM0, DEF NUM, COMBO_TERM_SLOW)
+
+ZMK_COMBO_ADV(caret, &kp CARET,     RT0 RM0, DEF NUM, COMBO_TERM_SLOW)
+ZMK_COMBO_ADV(amps,  &kp AMPS,      RT1 RM1, DEF NUM, COMBO_TERM_SLOW)
+ZMK_COMBO_ADV(star,  &kp STAR,      RT2 RM2, DEF NUM, COMBO_TERM_SLOW)
+ZMK_COMBO_ADV(plus,  &kp PLUS,      RT3 RM3, DEF NUM, COMBO_TERM_SLOW)
+
+ZMK_COMBO_ADV(grave, &kp GRAVE,     LM3 LB3, DEF NUM, COMBO_TERM_SLOW)
+ZMK_COMBO_ADV(bslh,  &kp BSLH,      LM2 LB2, DEF NUM, COMBO_TERM_SLOW)
+ZMK_COMBO_ADV(tilde, &kp TILDE,     LM1 LB1, DEF NUM, COMBO_TERM_SLOW)
+ZMK_COMBO_ADV(equal, &kp EQUAL,     LM0 LB0, DEF NUM, COMBO_TERM_SLOW)
+
+ZMK_COMBO_ADV(under, &kp UNDER,     RM0 RB0, DEF NUM, COMBO_TERM_SLOW)
+ZMK_COMBO_ADV(minus, &kp MINUS,     RM1 RB1, DEF NUM, COMBO_TERM_SLOW)
+ZMK_COMBO_ADV(fslh,  &kp FSLH,      RM2 RB2, DEF NUM, COMBO_TERM_SLOW)
+ZMK_COMBO_ADV(pipe,  &kp PIPE,      RM3 RB3, DEF NUM, COMBO_TERM_SLOW)
+
+#undef COMBO_HOOK
+#define COMBO_HOOK
+/*****************************************
+ * Standard ARTSEY combo definitions
+ * These should NOT be changed and are global in scope
+ *****************************************/
+ZMK_COMBO_ADV(combo_enter,       &kp ENTER,  KEY_A KEY_E, LAYERS_ARTSEY, TIMEOUT_COMBO_2)
+ZMK_COMBO_ADV(combo_control ,    &sk LCTRL,  KEY_E KEY_S, LAYERS_ARTSEY, TIMEOUT_COMBO_2)
+ZMK_COMBO_ADV(combo_gui,         &sk LGUI,   KEY_Y KEY_S, LAYERS_ARTSEY, TIMEOUT_COMBO_2)
+ZMK_COMBO_ADV(combo_alt,         &sk LALT,   KEY_I KEY_S, LAYERS_ARTSEY, TIMEOUT_COMBO_2)
+ZMK_COMBO_ADV(combo_backspace,   &kp BKSP,   KEY_E KEY_R, LAYERS_ARTSEY, TIMEOUT_COMBO_2)
+ZMK_COMBO_ADV(combo_delete,      &kp DELETE, KEY_I KEY_R, LAYERS_ARTSEY, TIMEOUT_COMBO_2)
+ZMK_COMBO_ADV(combo_shift_lock,  &kt LSHFT,  KEY_R KEY_Y, LAYERS_ARTSEY, TIMEOUT_COMBO_2)
+
+ZMK_COMBO_ADV(combo_b,           &kp B,      KEY_E KEY_O, LAYER_ID_BASE, TIMEOUT_COMBO_2)
+ZMK_COMBO_ADV(combo_c,           &kp C,      KEY_E KEY_Y, LAYER_ID_BASE, TIMEOUT_COMBO_2)
+ZMK_COMBO_ADV(combo_y,           &kp Y,      KEY_I KEY_O, LAYER_ID_BASE, TIMEOUT_COMBO_2)
+ZMK_COMBO_ADV(combo_f,           &kp F,      KEY_A KEY_R, LAYER_ID_BASE, TIMEOUT_COMBO_2)
+ZMK_COMBO_ADV(combo_g,           &kp G,      KEY_R KEY_T, LAYER_ID_BASE, TIMEOUT_COMBO_2)
+ZMK_COMBO_ADV(combo_u,           &kp U,      KEY_Y KEY_I, LAYER_ID_BASE, TIMEOUT_COMBO_2)
+ZMK_COMBO_ADV(combo_h,           &kp H,      KEY_E KEY_I, LAYER_ID_BASE, TIMEOUT_COMBO_2)
+ZMK_COMBO_ADV(combo_v,           &kp V,      KEY_R KEY_S, LAYER_ID_BASE, TIMEOUT_COMBO_2)
+ZMK_COMBO_ADV(combo_j,           &kp J,      KEY_T KEY_S, LAYER_ID_BASE, TIMEOUT_COMBO_2)
+ZMK_COMBO_ADV(combo_w,           &kp W,      KEY_A KEY_S, LAYER_ID_BASE, TIMEOUT_COMBO_2)
+ZMK_COMBO_ADV(combo_k,           &kp K,      KEY_Y KEY_O, LAYER_ID_BASE, TIMEOUT_COMBO_2)
+ZMK_COMBO_ADV(combo_comma,       &kp COMMA,  KEY_A KEY_I, LAYER_ID_BASE, TIMEOUT_COMBO_2)
+ZMK_COMBO_ADV(combo_period,      &kp PERIOD, KEY_A KEY_Y, LAYER_ID_BASE, TIMEOUT_COMBO_2)
+ZMK_COMBO_ADV(combo_slash,       &kp SLASH,  KEY_A KEY_O, LAYER_ID_BASE, TIMEOUT_COMBO_2)
+ZMK_COMBO_ADV(combo_exclamation, &kp EXCL,   KEY_T KEY_I, LAYER_ID_BASE, TIMEOUT_COMBO_2)
+
+ZMK_COMBO_ADV(combo_seven,       &kp N7,     KEY_A KEY_R, LAYER_ID_NUMBERS, TIMEOUT_COMBO_2)
+ZMK_COMBO_ADV(combo_eight,       &kp N8,     KEY_R KEY_T, LAYER_ID_NUMBERS, TIMEOUT_COMBO_2)
+ZMK_COMBO_ADV(combo_nine,        &kp N9,     KEY_E KEY_Y, LAYER_ID_NUMBERS, TIMEOUT_COMBO_2)
+ZMK_COMBO_ADV(combo_zero,        &kp N0,     KEY_Y KEY_I, LAYER_ID_NUMBERS, TIMEOUT_COMBO_2)
+
+ZMK_COMBO_ADV(combo_esc,         &kp ESC,    KEY_A KEY_R KEY_O, LAYERS_ARTSEY,    TIMEOUT_COMBO_3)
+ZMK_COMBO_ADV(combo_layer_nav,   &tog LAYER_ID_NAVIGATION, KEY_R KEY_E KEY_I, LAYERS_ARTSEY, TIMEOUT_COMBO_3)
+
+ZMK_COMBO_ADV(combo_m,           &kp M,      KEY_Y KEY_I KEY_O, LAYER_ID_BASE,    TIMEOUT_COMBO_3)
+ZMK_COMBO_ADV(combo_d,           &kp D,      KEY_A KEY_R KEY_T, LAYER_ID_BASE,    TIMEOUT_COMBO_3)
+ZMK_COMBO_ADV(combo_p,           &kp P,      KEY_E KEY_I KEY_O, LAYER_ID_BASE,    TIMEOUT_COMBO_3)
+ZMK_COMBO_ADV(combo_q,           &kp Q,      KEY_A KEY_T KEY_S, LAYER_ID_BASE,    TIMEOUT_COMBO_3)
+ZMK_COMBO_ADV(combo_x,           &kp X,      KEY_R KEY_T KEY_S, LAYER_ID_BASE,    TIMEOUT_COMBO_3)
+ZMK_COMBO_ADV(combo_l,           &kp L,      KEY_E KEY_Y KEY_I, LAYER_ID_BASE,    TIMEOUT_COMBO_3)
+ZMK_COMBO_ADV(combo_single_quote, &kp SQT,   KEY_A KEY_Y KEY_I, LAYER_ID_BASE,    TIMEOUT_COMBO_3)
+
+ZMK_COMBO_ADV(combo_tab,         &kp TAB,    KEY_A KEY_R KEY_T KEY_O, LAYERS_ARTSEY,    TIMEOUT_COMBO_4)
+ZMK_COMBO_ADV(combo_space,       &kp SPACE,  KEY_E KEY_Y KEY_I KEY_O, LAYERS_ARTSEY,    TIMEOUT_COMBO_4)
+ZMK_COMBO_ADV(combo_shift,       &sk LSHFT,  KEY_E KEY_R KEY_T KEY_S, LAYERS_ARTSEY,    TIMEOUT_COMBO_4)
+
+ZMK_COMBO_ADV(combo_z,           &kp Z,      KEY_A KEY_R KEY_T KEY_S, LAYER_ID_BASE,    TIMEOUT_COMBO_4)
+ZMK_COMBO_ADV(combo_caps_lock,   &kp CAPS,   KEY_O KEY_I KEY_Y KEY_A, LAYER_ID_BASE,    TIMEOUT_COMBO_4)
