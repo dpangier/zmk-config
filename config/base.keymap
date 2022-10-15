@@ -139,9 +139,9 @@ ZMK_LAYER(default_layer,
 
 ZMK_LAYER(num_layer,
      // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-          &kp ESC       XXX           &kp UP        XXX           XXX               EXTRA_MID        &hm F12 COMMA  &hm F7 N7     &hm F8 N8     &hm F9 N9     &kp BKSP
+          &kp ESC       &kp HOME      &kp UP        &kp END       &kp PG_UP         EXTRA_MID        &hm F12 COMMA  &hm F7 N7     &hm F8 N8     &hm F9 N9     &kp BKSP
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-          &kp TAB       &kp LEFT      &kp DOWN      &kp RIGHT     XXX               EXTRA_MID        &hm F11 DOT    &hm F4 N4     &hm F5 N5     &hm F6 N6     &kp RET
+          &kp TAB       &kp LEFT      &kp DOWN      &kp RIGHT     &kp PG_DN         EXTRA_MID        &hm F11 DOT    &hm F4 N4     &hm F5 N5     &hm F6 N6     &kp RET
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
           &to LAYER_ID_BASE &kp C_VOL_DN &kp C_VOL_UP &kp C_BRI_DN &kp C_BRI_UP     EXTRA_MID         &hm F10 N0    &hm F1 N1     &hm F2 N2     &hm F3 N3     &kp PRS
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
