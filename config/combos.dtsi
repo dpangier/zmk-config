@@ -69,6 +69,8 @@ ZMK_COMBO_ADV(minus, &kp MINUS,     RM1 RB1, DEF NUM, COMBO_TERM_SLOW)
 ZMK_COMBO_ADV(fslh,  &kp FSLH,      RM2 RB2, DEF NUM, COMBO_TERM_SLOW)
 ZMK_COMBO_ADV(pipe,  &kp PIPE,      RM3 RB3, DEF NUM, COMBO_TERM_SLOW)
 
+ZMK_COMBO_ADV(reset, &bootloader,   LB4 RB4, NUM, COMBO_TERM_SLOW)
+
 #undef COMBO_HOOK
 #define COMBO_HOOK
 /*****************************************
