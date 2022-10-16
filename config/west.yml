@@ -1,10 +1,10 @@
 manifest:
   remotes:
-    - name: zmkfirmware
-      url-base: https://github.com/zmkfirmware
+    - name: dpangier
+      url-base: https://github.com/dpangier
   projects:
     - name: zmk
-      remote: zmkfirmware
+      remote: dpangier
       revision: main
       import: app/west.yml
   self:
