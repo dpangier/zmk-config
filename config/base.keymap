@@ -127,11 +127,11 @@ ZMK_BEHAVIOR(layer_custom_kp, hold_tap,
 
 ZMK_LAYER(default_layer,
      // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-         &hm EXCL SEMI &hm UNDER COMMA &hm MINUS DOT &kp P        &kp Y             EXTRA_MID         &kp F         &kp G         &kp C         &kp R         &kp L
+          &kp SEMI      &kp COMMA     &kp DOT       &kp P         &kp Y             EXTRA_MID         &kp F         &kp G         &kp C         &kp R         &kp L
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
           &kp A         &lhm LCTRL O  &lhm LALT E   &lhm LGUI U   &kp I             EXTRA_MID         &kp D         &rhm RGUI H   &rhm RALT T   &rhm RCTRL N  &kp S
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-          &hm SLASH APOS &kp Q        &kp J         &kp K         &kp X             EXTRA_MID         &kp B         &kp M         &kp W         &kp V         &kp Z
+          &kp APOS      &kp Q         &kp J         &kp K         &kp X             EXTRA_MID         &kp B         &kp M         &kp W         &kp V         &kp Z
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
           EXTRA_BOT_L                          &hm LC(LS(LALT)) SPC &sk LSHFT       EXTRA_MID         &kp BSPC      &to NUM                                   EXTRA_BOT_R
      // ╰─────────────╯                           ╰─────────────┴─────────────╯   ╰─────────────╯   ╰─────────────┴─────────────╯                           ╰─────────────╯
@@ -143,9 +143,9 @@ ZMK_LAYER(num_layer,
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
           &kp TAB       &kp LEFT      &kp DOWN      &kp RIGHT     &kp PG_DN         EXTRA_MID        &hm F11 DOT    &hm F4 N4     &hm F5 N5     &hm F6 N6     &kp RET
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-          &to LAYER_ID_BASE &kp C_VOL_DN &kp C_VOL_UP &kp C_BRI_DN &kp C_BRI_UP     EXTRA_MID         &hm F10 N0    &hm F1 N1     &hm F2 N2     &hm F3 N3     &kp PRS
+          &kp C_BRI_DN &kp C_BRI_UP  &kp C_VOL_DN   &kp C_VOL_UP  &kp RALT          EXTRA_MID         &hm F10 N0    &hm F1 N1     &hm F2 N2     &hm F3 N3     &kp PRS
      // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-          EXTRA_BOT_L                               &to DEF       &sk LSHFT         EXTRA_MID         &kp RGUI      &kp RALT                                  EXTRA_BOT_R
+          EXTRA_BOT_L                               &to DEF       &sk LSHFT         EXTRA_MID         &kp RGUI      XXX                                       EXTRA_BOT_R
      // ╰─────────────╯                           ╰─────────────┴─────────────╯   ╰─────────────╯   ╰─────────────┴─────────────╯                           ╰─────────────╯
 )
 
